@@ -1,24 +1,6 @@
 @server = https://fictional-train-qwgggv46xw939v6q-8080.app.github.dev
-//@instumentos = {{server}}/api/instrumentos
-@emp ={{server}}/api/productos
-@musicos = {{server}}/api/musicos
 ###
-GET {{emp}}
+@pro ={{server}}/api/productos
 ###
-POST {{emp}}
-Content-Type: application/json
-
-{
-    "nombre": "Quena",
-    "categoria": "Viento",
-    "descripcion": "Tubo de madera con orificios"
-}
+GET {{pro}}
 ###
-POST {{musicos}}
-Content-Type: application/json
-
-{"nombre": "Otro Músico"}
-###
-GET {{server}}/api/integrantes/1/instrumento
-###
-GET {{server}}/api/bandas/1/formacion
