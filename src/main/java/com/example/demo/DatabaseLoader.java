@@ -16,8 +16,6 @@ public class DatabaseLoader implements CommandLineRunner {
 
 	@Override
 	public void run(String... strings) throws Exception {
-        this.repositoryP.save(new Producto("Carne de Res",20.00));
-        
 		Producto iRes = new Producto("Carne de Res",20.99);
 		Producto iSandia = new Producto("Sandia",10.00);
 		Producto iLeche = new Producto("leche pura vida",5.00);
