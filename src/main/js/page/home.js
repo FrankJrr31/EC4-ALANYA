@@ -52,32 +52,15 @@ class ProductoList extends React.Component {
 				<tbody>
 					<tr>
 						<th>Nombre</th>
-						<th>Acciones</th>
+						<th>precio</th>
 					</tr>
-					{instrumentos}
+					{productos}
 				</tbody>
 			</table>
 		)
 	}
 }
-class CategoriaList extends React.Component {
-	render() {
-		const categorias = this.props.categorias.map(categoria =>
-			<Categoria key={categoria._links.self.href} categoria={categoria} />
-		);
-		return (
-			<table border="1">
-				<tbody>
-					<tr>
-						<th>Nombre</th>
-						<th>Acciones</th>
-					</tr>
-					{musicos}
-				</tbody>
-			</table>
-		)
-	}
-}
+
 
 class Producto extends React.Component {
 	render() {
@@ -85,21 +68,7 @@ class Producto extends React.Component {
 		return (
 			<tr>
 				<td>{this.props.producto.nombre}</td>
-				<td>
-					<Link to={`/editar-producto/${id}`}>Editar</Link>
-				</td>
-			</tr>
-		)
-	}
-}
-
-class Categoria extends React.Component {
-	render() {
-		const id = this.props.categoria._links.self.href.split("/").slice(-1);
-		return (
-			<tr>
-				<td>{this.props.categoria.nombre}</td>
-
+				<td>{this.props.producto.precio}</td>
 			</tr>
 		)
 	}
